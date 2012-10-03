@@ -27,7 +27,7 @@ For example, it may be useful to send exceptions to Airbrake:
 ```ruby
 Rack::Leakin.handler = lambda do |env, beginning, ending|
   Airbrake.notify \
-    :error_message => "Memory leak detected, from #{from}KB to #{to}KB",
+    :error_message => "Memory leak detected, from #{beginning}KB to #{ending}KB",
     :error_class   => 'MemoryLeak',
     :parameters => {
       :request_uri => env['REQUEST_URI'],
