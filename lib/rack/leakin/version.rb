@@ -1,5 +1,5 @@
 module Rack
-  module Leakin
+  class Leakin
     VERSION = '0.0.1'
 
     def self.version
